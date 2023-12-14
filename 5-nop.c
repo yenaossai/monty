@@ -7,7 +7,7 @@
  * Return: nil
  */
 
-void ml_nop(stack_t **apex unsigned int count)
+void ml_nop(stack_t **apex, unsigned int count)
 {
 	(void) count;
 	(void) apex;

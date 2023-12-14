@@ -7,7 +7,7 @@
  * Return: nil
  */
 
-void ml_swap(stack_t **apex unsigned int count);
+void ml_swap(stack_t **apex, unsigned int count);
 {
 	stack_t *x;
 	int elm = 0, aux;
@@ -20,7 +20,10 @@ void ml_swap(stack_t **apex unsigned int count);
 	}
 	if (elm < 2)
 	{
-		fprint(stderr, "L<line_number>: can't swap, stack too short\n", count);
+		fprint(stderr, "L%d: can't swap, stack too short\n", count);
+		fclose(bus.file);
+		free(bus.content);
+		free_stack(*apex);
 		exit(EXIT_FAILURE);
 	}
 	x = *apex;
